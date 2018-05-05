@@ -1,0 +1,20 @@
+li {
+  padding: 10px;
+  margin: 10px;
+  background: #5c79a3;;
+}
+
+.label {
+  font-weight: bold;
+}
+
+h1{
+  color: white;
+}
+
+body {
+  background: url(/assets/img/hamburger.jpg);
+  background-repeat: no-repeat;
+  background-size:110%;
+  color: white;
+}

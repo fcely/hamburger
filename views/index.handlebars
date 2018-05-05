@@ -1,0 +1,56 @@
+
+<div class="container" >
+
+<h1>Burger App</h1>
+
+
+
+<!-- Pass in data from server.js -->
+
+<div class="row">
+
+
+<ul class="col ml-1">
+  <p>On Order</p>
+  {{#each raw_Order}}
+  	<li>
+
+      <p>{{this.id}} - {{this.ord_desc}} 
+  		<!--<p><span class="label">id:</span> {{this.id}}</p>
+      <p><span class="label">order:</span> {{this.ord_desc}}</p>-->
+      <button data-id="{{this.id}}" class="float-right eat">Eat</button> </p>
+  	</li>
+  {{/each}}
+</ul>
+
+<ul class="col">
+  <p>Inside of You</p>
+  {{#each finished_Order}}
+  	<li>
+
+      <p>{{this.id}} - {{this.ord_desc}} 
+  		<!--<p><span class="label">id:</span> {{this.id}}</p>
+      <p><span class="label">order:</span> {{this.ord_desc}}</p>-->
+      </p>
+  	</li>
+  {{/each}}
+</ul>
+
+
+</div>
+
+
+<h2 class="row">Order More</h2>
+
+<form class="create-form" method="POST" action="/api/orders/new">
+
+  <div class="form-group">
+    <label for="order_desc">Order:</label>
+    <input type="text" id="order_desc" name="order_desc">
+  </div>
+
+  <button id="new_order" type="submit">Add Order</button>
+</form>
+
+
+</div>
